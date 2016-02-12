@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Test HTML tags</title>
     <style type="text/css">
         p {
@@ -21,23 +21,60 @@
             border: 0;
             margin: 5px 0 5px 0;
         }
+
+        .rotate {
+            transform: rotate(90deg);
+            height: 10px;
+        }
     </style>
 </head>
 <body>
 
 <h1> Картинка </h1>
+
 <p>Оригинал </p>
-<img src="http://academ-it-school.ru/assets/images/logo.png">
+<img src="http://academ-it-school.ru/assets/images/logo.png"/>
+
 <p>Измененный размер</p>
-<img src="http://academ-it-school.ru/assets/images/logo.png" width="70" height="70">
+<img src="http://academ-it-school.ru/assets/images/logo.png" width="70" height="70"/>
+
 <p class="border">Оригинал в рамке </p>
-<img src="http://academ-it-school.ru/assets/images/logo.png" border="12">
+<img src="http://academ-it-school.ru/assets/images/logo.png" border="12"/>
+
+
+<hr/>
+<div>
+    <table border="1">
+        <caption> Сотрудники</caption>
+        <tr>
+            <td rowspan="5" class="rotate">Прошивать здесь</td>
+            <td colspan="4" align=" center">Персональные данные</td>
+        </tr>
+        <tr>
+
+            <th>№ п.п.</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Иван</td>
+            <td>Иванов</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Петр</td>
+            <td>Петров</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Семён</td>
+            <td>Семёнов</td>
+        </tr>
+    </table>
+</div>
+<hr class="hr"/>
 </body>
-
-<hr>
-<table>
-<tr>
-
-</tr>
-</table>
 </html>
