@@ -6,30 +6,30 @@ var b = 6;
 var c = 9;
 
 var discriminant = calcDiscriminant(a, b, c);
+console.log("Дискрименант: " + discriminant);
 if (discriminant > 0) {
     var x = new Array();
-    x = calcTwoResults(a, b, c);
-    alert("X1=" + x[0] + ", X2=" + x[1]);
+    x = calcTwoResults(a, b,discriminant);
+    console.log("X1=" + x[0] + ", X2=" + x[1]);
 }
-if (discriminant == 0) {
+else if (discriminant == 0) {
     var x = calcOneResult(a, b);
-    alert("X1=X2=" + x);
+    console.log("X1=X2=" + x);
 } else {
-    alert("Нет решений");
+    console.log("Нет решений");
 }
 
 
 function calcDiscriminant(a, b, c) {
-    var discriminant;
-    discriminant = Math.pow(b, 2) - 4 * a * c;
-    alert("Дискрименант: " + discriminant);
+    var discriminant = Math.pow(b, 2) - 4 * a * c;
+
     return discriminant;
 }
 
-function calcTwoResults(a, b, c) {
+function calcTwoResults(a, b,discriminant ) {
     var x = new Array();
-    x[0] = (-b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / 2 * a;
-    x[1] = (-b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / 2 * a;
+    x[0] = (-b + Math.sqrt(discriminant)) / (2 * a);
+    x[1] = (-b - Math.sqrt(discriminant)) / (2 * a);
     return x;
 }
 function calcOneResult(a, b) {
