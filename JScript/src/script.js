@@ -5,4 +5,4 @@ var multiString = "";
 for (var i = 1; i <= 10; i++) {
     multiString = multiString + "строка" + " " + i + "\n";
 }
-alert(multiString);
+console.log(multiString);
